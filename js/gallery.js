@@ -17,6 +17,12 @@ function activateGallery() {
       let currentClass = 'current'
       document.querySelector('.current').classList.remove(currentClass);
       thumbnail.parentNode.classList.add(currentClass);
+
+      let galleryInfo       = document.querySelector('#gallery-info');
+      let title             = document.querySelector('.title');
+      let description       = document.querySelector('.description');
+      title.innerHTML       = thumbnail.dataset.title;
+      description.innerHTML = thumbnail.dataset.description;
     });
   });
 }
